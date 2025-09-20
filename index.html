@@ -13,25 +13,29 @@
     <main>
         <section class="info">
             <h2>FICOU COM DÚVIDA?</h2>
-            <h2>NOS MANDE UMAMENSAGEM!</h2>
+            <h2>NOS MANDE UMA MENSAGEM!</h2>
             <p>caso tenha ficado com qualquer dúvida basta nos mandar uma mensagem e entraremos em contato em menos de
                 24h.</p>
         </section>
         <section class="form">
-            <div class="form-container">
+            <div>
                 <form action="">
-                    <input type="text" name="name" id="name" placeholder="Nome completo *" />
-                    <p>campo obrigatório</p>
-                    <input type="text" name="email" id="email" placeholder="Email *" />
-                    <p>campo obrigatório</p>
-                    <input type="text" name="telefone" id="telefone" placeholder="Telefone *" />
-                    <p>campo obrigatório</p>
-                    <input type="text" name="mensagem" id="telefone" placeholder="Mensagem *" />
-                    <p>campo obrigatório</p>
+                    <input type="text" name="name" id="name" placeholder="Nome completo *" class="text" />
+                    <p class="alert">campo obrigatório</p>
 
-                    <p>*campos obrigatórios</p>
+                    <input type="text" name="email" id="email" placeholder="Email *" class="text" />
+                    <p class="alert">campo obrigatório</p>
 
-                    <input type="submit" value="Enviar" />
+                    <input type="text" name="telefone" id="telefone" placeholder="Telefone *" class="text" />
+                    <p class="alert">campo obrigatório</p>
+
+                    <textarea type="text" name="mensagem" id="mensagem" placeholder="Mensagem *" class="message"
+                        rows="6"></textarea>
+                    <p class="alert">campo obrigatório</p>
+
+                    <p class="advise">*campos obrigatórios</p>
+
+                    <button type="submit" class="submit">Enviar</button>
                 </form>
             </div>
         </section>
