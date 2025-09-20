@@ -108,3 +108,9 @@ section.form p.advise {
   margin-top: -5px;
   font-size: 15px;
 }
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+}
