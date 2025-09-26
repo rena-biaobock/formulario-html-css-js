@@ -1,39 +1,19 @@
-const inputName = document.getElementById("name");
-const inputEmail = document.getElementById("email");
-const inputTelefone = document.getElementById("telefone");
-const inputMensagem = document.getElementById("mensagem");
-
-const missingAlertName = document.getElementsByClassName("alert name")[0];
-const missingAlertEmail = document.getElementsByClassName("alert email")[0];
-const missingAlertTelefone =
-  document.getElementsByClassName("alert telefone")[0];
-const missingAlertMensagem =
-  document.getElementsByClassName("alert mensagem")[0];
-
+const formFields = document.querySelectorAll(".field");
 const form = document.getElementById("form");
 
-form.addEventListener("submit", function (event) {
-  event.preventDefault();
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-  inputList = [inputName, inputEmail, inputTelefone, inputMensagem];
-  alertList = [
-    missingAlertName,
-    missingAlertEmail,
-    missingAlertTelefone,
-    missingAlertMensagem,
-  ];
+  formFields.forEach((input) => {
+    console.log(input);
 
-  for (let index = 0; index < inputList.length; index++) {
-    const element = inputList[index];
-    const alert = alertList[index];
-
-    if (element.value === "") {
-      element.classList.remove("not-empty");
-      element.classList.add("empty");
-      alert.classList.add("show");
+    if (input.value === "") {
+      input.classList.remove("not-empty");
+      input.classList.add("empty");
+      input.nextElementSibling.classList.add("show");
     } else {
-      element.classList.add("not-empty");
-      alert.classList.remove("show");
+      input.classList.add("not-empty");
+      input.nextElementSibling.classList.remove("show");
     }
-  }
+  });
 });
